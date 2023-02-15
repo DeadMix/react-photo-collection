@@ -6,7 +6,6 @@ $btn-color: #2d2d30;
 $btn-hover-color: #3e3e42;
 $btn-active: #007acc;
 
-
 body {
 	margin: 0;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont,
@@ -53,7 +52,7 @@ h1 {
 
 		&.active {
 			background-color: $btn-active;
-			// color: #000;
+			
 		}
 	}
 }

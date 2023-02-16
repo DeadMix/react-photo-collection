@@ -1,5 +1,7 @@
 # Photo collection
 
+## Libraries used: 
+
 *	React
 *	React-content-loader
 *	React-dom

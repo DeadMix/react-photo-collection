@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
 
 $bg-color: #1e1e1e;
 $font-color: #eeeeee;
@@ -6,32 +6,39 @@ $btn-color: #2d2d30;
 $btn-hover-color: #3e3e42;
 $btn-active: #007acc;
 
+::selection {
+	background: $font-color;
+}
 
 body {
-	margin: 0;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont,
-		'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+		"Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: $bg-color;
-	color: $font-color ;
+	color: $font-color;
 }
 
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 .App {
-	padding: 50px;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 10px;
 	width: 100%;
 	max-width: 1200px;
 }
 
 h1 {
-	font-family: 'Merriweather', serif;
+	font-family: "Merriweather", serif;
 }
 
 .tags {
+	margin-top: 10px;
 	list-style: none;
 	padding: 0;
 
@@ -40,12 +47,11 @@ h1 {
 		padding: 12px 18px;
 		background-color: $btn-color;
 		border-radius: 10px;
-		margin-right: 10px;
-		cursor: pointer;
+		margin: 5px 10px 5px 0;
 		font-weight: 500;
 		font-size: 18px;
-		border: 1px solid transparent;
 		transition: all 0.15s ease-in-out;
+		cursor: pointer;
 
 		&:hover {
 			background: $btn-hover-color;
@@ -53,7 +59,6 @@ h1 {
 
 		&.active {
 			background-color: $btn-active;
-			// color: #000;
 		}
 	}
 }
@@ -61,9 +66,8 @@ h1 {
 .content {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 30px;
-	grid-row-gap: 30px;
-	margin-top: 40px;
+	gap: 30px;
+	margin-top: 20px;
 
 	@media (max-width: 1000px) {
 		grid-template-columns: repeat(2, 1fr);
@@ -93,7 +97,7 @@ h1 {
 		margin: 0;
 		margin-top: 15px;
 		font-size: 20px;
-		font-family: 'Merriweather', serif;
+		font-family: "Merriweather", serif;
 	}
 
 	&:hover {
@@ -133,7 +137,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position:fixed;
+	position: fixed;
 	background: rgba(0, 0, 0, 0.8);
 	top: 0;
 	right: 0;
@@ -147,7 +151,7 @@ h1 {
 	padding: 30px;
 	border-radius: 20px;
 	background: $btn-color;
-	
+
 	&__img {
 		border-radius: 20px;
 		max-width: 100%;
@@ -162,16 +166,17 @@ h1 {
 }
 
 .search-input {
-	font-size: 16px;
 	width: 250px;
 	height: 50px;
+	margin-top: 10px;
 	padding: 0 15px;
+	font-size: 16px;
 	border-radius: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	outline: none;
-	transition: all 0.15s ease-in-out;
 	background: $btn-color;
 	color: $font-color;
+	outline: none;
+	transition: all 0.15s ease-in-out;
 
 	&:focus {
 		border: 1px solid rgba(255, 255, 255, 0.2);
@@ -179,10 +184,8 @@ h1 {
 }
 
 .pagination {
-	list-style: none;
-	padding: 0;
-	margin: 0;
 	margin-top: 40px;
+	list-style: none;
 
 	li {
 		display: inline-block;
